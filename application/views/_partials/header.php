@@ -8,16 +8,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title><?php echo $title; ?> &mdash; PSDMACT</title>
-
-    <!-- General CSS Files -->
     <link rel="icon" href="<?php echo base_url(); ?>assets/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/modules/bootstrap/css/bootstrap.css">
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/modules/fontawesome/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- CSS Libraries -->
     <?php
-if ($this->uri->segment(1) == "" || $this->uri->segment(1) == "index") { ?>
+if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/modules/jqvmap/dist/jqvmap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/modules/summernote/summernote-bs4.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
@@ -129,7 +130,7 @@ if ($this->uri->segment(1) == "" || $this->uri->segment(1) == "index") { ?>
 } ?>
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css?v=1">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
     <!-- Start GA -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
@@ -148,11 +149,11 @@ if ($this->uri->segment(1) == "" || $this->uri->segment(1) == "index") { ?>
 
 <?php
 if ($this->uri->segment(2) == "layout_transparent") {
-  $this->load->view('_partials/layout-2');
-  $this->load->view('_partials/sidebar-2');
+  $this->load->view('dist/_partials/layout-2');
+  $this->load->view('dist/_partials/sidebar-2');
 }elseif ($this->uri->segment(2) == "layout_top_navigation") {
-  $this->load->view('_partials/layout-3');
-  $this->load->view('_partials/navbar');
+  $this->load->view('dist/_partials/layout-3');
+  $this->load->view('dist/_partials/navbar');
 }elseif ($this->uri->segment(1) != "login" && $this->uri->segment(2) != "auth_forgot_password"&& $this->uri->segment(2) != "auth_register" && $this->uri->segment(2) != "auth_reset_password" && $this->uri->segment(2) != "errors_503" && $this->uri->segment(2) != "errors_403" && $this->uri->segment(2) != "errors_404" && $this->uri->segment(2) != "errors_500" && $this->uri->segment(2) != "utilities_contact" && $this->uri->segment(2) != "utilities_subscribe") {
   $this->load->view('_partials/layout');
   $this->load->view('_partials/sidebar');

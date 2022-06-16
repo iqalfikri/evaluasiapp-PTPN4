@@ -11,8 +11,13 @@ class Admin extends CI_Controller {
 
 	public function index() {
 		
-		// $this->load->view('index', $data);
-		echo "sukses";
+		$data = array (
+			'title' => "Home Dashboard",
+			'user' => $this->db->get_where('tbl_users', ['username' => getUsername()])->row_array(),
+			'log' => $this->db->order_by('tgl_log', 'DESC')->get_where('tbl_log',['username_user' => getUsername()])->result_array()
+		);
+		$this->load->view('index', $data);
+		//echo "sukses";
 	}
 
 

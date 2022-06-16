@@ -1238,6 +1238,20 @@ h6 .badge {
   background-color: #63ed7a !important;
   color: #fff !important; }
 
+  /*btn-ptpn  */
+  .btn-success-ptpn, .btn-success-ptpn.disabled {
+    /* box-shadow: 0 2px 6px #a8f5b4; */
+    background-color: #35ad37;
+    /* border-color: #63ed7a; */
+    color: #fff; }
+    .btn-success-ptpn:hover, .btn-success-ptpn:focus, .btn-success-ptpn:active, .btn-success-ptpn.disabled:hover, .btn-success-ptpn.disabled:focus, .btn-success-ptpn.disabled:active {
+      background-color: #1e9220 !important;
+      color: #fff !important; }
+  
+  /* .btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active, .btn-outline-success.disabled:hover, .btn-outline-success.disabled:focus, .btn-outline-success.disabled:active {
+    background-color: #63ed7a !important;
+    color: #fff !important; } */
+
 .btn-danger, .btn-danger.disabled {
   box-shadow: 0 2px 6px #fd9b96;
   background-color: #fc544b;
@@ -1518,7 +1532,8 @@ h6 .badge {
   left: 0;
   width: 100%;
   height: 115px;
-  background-color: #6777ef;
+  /* background-color: #6777ef; */
+  background-color: #35ad37;
   z-index: -1; }
 
 .navbar {

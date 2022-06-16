@@ -51,7 +51,8 @@ $this->load->view('_partials/header');
                                     </div> -->
 
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-success btn-lg btn-block" tabindex="4">
+                                        <button type="submit" class="btn btn-success-ptpn btn-lg btn-block"
+                                            tabindex="4">
                                             Masuk
                                         </button>
                                     </div>

@@ -24,3 +24,9 @@ function add_log($activity, $username)
   }
 
 }
+
+function getUsername(){
+  $ci = get_instance();
+  $data = $ci->session->userdata('username');
+  return $data;
+}
