@@ -19,7 +19,7 @@ $this->load->view('_partials/header');
                             <h4>Total User</h4>
                         </div>
                         <div class="card-body">
-                            10
+                            <?= $user_all?>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ $this->load->view('_partials/header');
                             <h4>Total Pimpinan</h4>
                         </div>
                         <div class="card-body">
-                            42
+                            <?= $user_pimpinan?>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ $this->load->view('_partials/header');
                             <h4>Jumlah Pelatihan</h4>
                         </div>
                         <div class="card-body">
-                            1,201
+                            <?= $pelatihan_all?>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ $this->load->view('_partials/header');
                             <h4>Pelatihan Belum Dinilai</h4>
                         </div>
                         <div class="card-body">
-                            47
+                            <?= $pelatihan_pending?>
                         </div>
                     </div>
                 </div>
