@@ -60,7 +60,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php } ?>
             <?php if ($user['role'] == 'atasan' || $user['role'] == 'administrator') {?>
             <li class="menu-header">Pimpinan Menu</li>
+            <li
+                class="dropdown <?php echo $this->uri->segment(1) == 'data_user' || $this->uri->segment(1) == 'input_user'  ? 'active' : ''; ?>">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-users"></i>
+                    <span>Management Staff</span></a>
+                <ul class="dropdown-menu">
+                    <li class="<?php echo $this->uri->segment(1) == 'addstuff' ? 'active' : ''; ?>"><a class="nav-link"
+                            href="<?php echo base_url(); ?>addstuff">Tambah Staff</a></li>
+                    <li></li>
+                    <li class="<?php echo $this->uri->segment(1) == 'liststuff' ? 'active' : ''; ?>"><a class="nav-link"
+                            href="<?php echo base_url(); ?>liststuff">List Staff</a></li>
+                </ul>
+            </li>
+            <li
+                class="dropdown <?php echo $this->uri->segment(1) == 'laporanpenilaian' || $this->uri->segment(1) == 'datapenilaian'  ? 'active' : ''; ?>">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-clipboard"></i>
+                    <span>Penilaian</span></a>
+                <ul class="dropdown-menu">
+                    <li class="<?php echo $this->uri->segment(1) == 'addpenilaian' ? 'active' : ''; ?>"><a
+                            class="nav-link" href="<?php echo base_url("addpenilaian"); ?>">Tambah Penilaian</a>
+                    </li>
+                    <li></li>
+                    <li class="<?php echo $this->uri->segment(1) == 'listpenilaian' ? 'active' : ''; ?>"><a
+                            class="nav-link" href="<?php echo base_url("listpenilaian"); ?>">List Penilaian </a></li>
+                </ul>
+            </li>
             <?php } ?>
+            <!-- <?php if ($user['role'] == 'bawahan' || $user['role'] == 'atasan' || $user['role'] == 'administrator') {?>
+            <li class="menu-header">Staff Menu</li>
+            <?php } ?> -->
         </ul>
     </aside>
 </div>

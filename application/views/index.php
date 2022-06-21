@@ -9,6 +9,7 @@ $this->load->view('_partials/header');
             <h1>Dashboard</h1>
         </div>
         <div class="row">
+            <?php if ($user['role'] == 'administrator') {?>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-primary">
@@ -61,7 +62,7 @@ $this->load->view('_partials/header');
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Pelatihan Belum Dinilai</h4>
+                            <h4>Total Pelatihan Belum Dinilai</h4>
                         </div>
                         <div class="card-body">
                             <?= $pelatihan_pending?>
@@ -69,6 +70,56 @@ $this->load->view('_partials/header');
                     </div>
                 </div>
             </div>
+            <?php } ?>
+            <?php if ($user['role'] == 'atasan') {?>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-primary">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Total Staff</h4>
+                        </div>
+                        <div class="card-body">
+                            <?= $staff_all?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-info">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Pelatihan Dinilai</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- <?= $user_pimpinan?> -->
+                            3
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-danger">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Pelatihan Belum Dinilai</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- <?= $pelatihan_all?> -->
+                            8
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
         </div>
         <div class="row">
             <div class="col-lg-7 col-md-12 col-12 col-sm-12">
